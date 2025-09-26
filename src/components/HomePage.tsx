@@ -21,7 +21,7 @@ export function HomePage() {
         <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-lg overflow-hidden bg-white flex items-center justify-center">
             <img
-              src="/logo.png"
+              src="logo.png"
               alt="Studio Claudine Logo"
               className="w-full h-full object-cover rounded-full"
               onError={(e) => console.error('Logo failed to load:', e)}
