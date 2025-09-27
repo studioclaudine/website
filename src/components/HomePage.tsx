@@ -2,7 +2,6 @@ import { LinkCard } from './LinkCard'
 import { InstagramIcon, EtsyIcon, MailIcon, PortfolioIcon } from './Icons'
 import { Header } from './Header'
 import ceramicsData from '../data/ceramics.json'
-import { useState, useEffect } from 'preact/hooks'
 
 interface CeramicData {
   id: number
@@ -18,24 +17,6 @@ interface CeramicData {
 export function HomePage() {
   // Sort ceramics by order field
   const sortedCeramics = (ceramicsData as CeramicData[]).sort((a, b) => a.order - b.order)
-
-  console.log('Sorted ceramics:', sortedCeramics)
-  console.log('Ceramics length:', sortedCeramics.length)
-
-  // State for lazy loading
-  const [visibleItems, setVisibleItems] = useState(sortedCeramics.length)
-
-  // Load more items when scrolling
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1000) {
-        setVisibleItems(prev => Math.min(prev + 4, sortedCeramics.length))
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [sortedCeramics.length])
 
   return (
     <div className="min-h-screen bg-neutral-lightest">
