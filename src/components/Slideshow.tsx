@@ -22,22 +22,18 @@ export function Slideshow() {
   // Auto-advance slideshow
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % topPhotos.length)
+      setCurrentSlide((prev: number) => (prev + 1) % topPhotos.length)
     }, 5000) // Change slide every 5 seconds
 
     return () => clearInterval(timer)
   }, [topPhotos.length])
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index)
-  }
-
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % topPhotos.length)
+    setCurrentSlide((prev: number) => (prev + 1) % topPhotos.length)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + topPhotos.length) % topPhotos.length)
+    setCurrentSlide((prev: number) => (prev - 1 + topPhotos.length) % topPhotos.length)
   }
 
   return (

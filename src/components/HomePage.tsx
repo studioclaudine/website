@@ -2,7 +2,7 @@ import { LinkCard } from './LinkCard'
 import { InstagramIcon, EtsyIcon, MailIcon, PortfolioIcon } from './Icons'
 import { Header } from './Header'
 import ceramicsData from '../data/ceramics.json'
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'preact/hooks'
 
 export function HomePage() {
   // Sort ceramics by order field
