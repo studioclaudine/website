@@ -7,18 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        'pottery': {
-          'cream': '#F5E6D3',
-          'terracotta': '#C65D00',
-          'clay': '#8B4513',
-          'sand': '#D2B48C',
-          'charcoal': '#333333',
+        'neutral': {
+          'lightest': '#F8F6F3',
+          'lighter': '#F0EDE8',
+          'light': '#E8E4DE',
+          'medium': '#D2CCC4',
+          'dark': '#B8B2A8',
+          'darker': '#8B857B',
+          'darkest': '#5A5550',
+          'charcoal': '#3B3935',
+          'accent': '#A39080',
         }
       },
       fontFamily: {
-        'patron': ['Patron', 'sans-serif'],
+        'barlow': ['Barlow', 'sans-serif'],
         'serif': ['Playfair Display', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        'sans': ['Barlow', 'sans-serif'],
       }
     },
   },
