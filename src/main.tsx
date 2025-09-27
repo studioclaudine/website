@@ -7,6 +7,7 @@ import { PortfolioPage } from './components/PortfolioPage'
 function App() {
   return (
     <Router>
+      <Route path="/" component={HomePage} />
       <Route path="/website/" component={HomePage} />
       <Route path="/website/portfolio" component={PortfolioPage} />
     </Router>
