@@ -7,13 +7,14 @@ interface CeramicItemProps {
   photo: string
   price: string
   etsyLink: string | null
+  outOfStock?: boolean
 }
 
-export function CeramicItem({ title, subtitle, photo, price, etsyLink }: CeramicItemProps) {
-  const isAvailable = etsyLink !== null
+export function CeramicItem({ title, subtitle, photo, price, etsyLink, outOfStock = false }: CeramicItemProps) {
+  const isAvailable = etsyLink !== null && !outOfStock
 
   return (
-    <div className="bg-neutral-lightest rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-neutral-light">
+    <div className="bg-neutral-lightest rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-neutral-light flex flex-col">
       <div className="aspect-square overflow-hidden">
         <img
           src={photo}
@@ -25,10 +26,19 @@ export function CeramicItem({ title, subtitle, photo, price, etsyLink }: Ceramic
         />
       </div>
 
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-neutral-charcoal mb-1">{title}</h3>
-        <p className="text-sm text-neutral-darker mb-2">{subtitle}</p>
-        <p className="text-xl font-bold text-neutral-accent mb-3">{price}</p>
+      <div className="p-4 flex flex-col flex-1">
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-neutral-charcoal mb-1">{title}</h3>
+          <p className="text-sm text-neutral-darker mb-2">{subtitle}</p>
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-xl font-bold text-neutral-accent">{price}</p>
+            {outOfStock && (
+              <span className="text-xs font-medium text-neutral-darker bg-neutral-light px-2 py-1 rounded">
+                Out of Stock
+              </span>
+            )}
+          </div>
+        </div>
 
         {isAvailable ? (
           <a

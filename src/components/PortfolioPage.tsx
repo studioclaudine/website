@@ -1,6 +1,7 @@
 import { CeramicItem } from './CeramicItem'
 import { Header } from './Header'
 import ceramicsData from '../data/ceramics.json'
+import { useState } from 'preact/hooks'
 
 interface CeramicData {
   id: number
@@ -10,40 +11,73 @@ interface CeramicData {
   photo: string
   price: string
   etsyLink: string | null
+  outOfStock: boolean
 }
 
 export function PortfolioPage() {
+  const [stockFilter, setStockFilter] = useState<'all' | 'inStock' | 'outOfStock'>('all')
+
+  const filteredCeramics = (ceramicsData as CeramicData[]).filter(item => {
+    if (stockFilter === 'inStock') return !item.outOfStock
+    if (stockFilter === 'outOfStock') return item.outOfStock
+    return true
+  }).sort((a, b) => a.order - b.order)
+
   return (
-    <div className="min-h-screen bg-neutral-lightest">
+    <div className="min-h-screen bg-neutral-lighter">
       {/* Header */}
       <Header />
 
-      {/* Hero Section */}
-      <div className="bg-gradient-to-b from-neutral-lighter to-neutral-light py-32 pt-40">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl text-neutral-charcoal mb-6 font-semibold tracking-wide">
-            Portfolio
-          </h1>
-          <p className="text-lg md:text-xl text-neutral-darker max-w-2xl mx-auto font-light">
-            Discover our collection of handcrafted ceramic pieces, each uniquely made with love and attention to detail.
-          </p>
-        </div>
-      </div>
 
       {/* Navigation Back */}
-      <div className="max-w-6xl mx-auto px-6 pt-12 pb-8">
-        <a
-          href="/website/"
-          className="inline-flex items-center gap-2 text-neutral-accent hover:text-neutral-darker transition-colors duration-300 font-medium"
-        >
-          ← Back to Home
-        </a>
+      <div className="max-w-6xl mx-auto px-6 pt-40 pb-8">
+        <div className="flex justify-between items-center">
+          <a
+            href="/website/"
+            className="inline-flex items-center gap-2 text-neutral-accent hover:text-neutral-darker transition-colors duration-300 font-medium"
+          >
+            ← Back to Home
+          </a>
+
+          <div className="flex gap-2">
+            <button
+              onClick={() => setStockFilter('all')}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
+                stockFilter === 'all'
+                  ? 'bg-neutral-accent text-neutral-lightest'
+                  : 'bg-neutral-lightest text-neutral-charcoal hover:bg-neutral-light'
+              }`}
+            >
+              All Items
+            </button>
+            <button
+              onClick={() => setStockFilter('inStock')}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
+                stockFilter === 'inStock'
+                  ? 'bg-neutral-accent text-neutral-lightest'
+                  : 'bg-neutral-lightest text-neutral-charcoal hover:bg-neutral-light'
+              }`}
+            >
+              In Stock
+            </button>
+            <button
+              onClick={() => setStockFilter('outOfStock')}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
+                stockFilter === 'outOfStock'
+                  ? 'bg-neutral-accent text-neutral-lightest'
+                  : 'bg-neutral-lightest text-neutral-charcoal hover:bg-neutral-light'
+              }`}
+            >
+              Out of Stock
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Ceramics Grid */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {(ceramicsData as CeramicData[]).sort((a, b) => a.order - b.order).map((item) => (
+          {filteredCeramics.map((item) => (
             <CeramicItem
               key={item.id}
               id={item.id}
@@ -52,13 +86,14 @@ export function PortfolioPage() {
               photo={item.photo}
               price={item.price}
               etsyLink={item.etsyLink}
+              outOfStock={item.outOfStock}
             />
           ))}
         </div>
       </div>
 
       {/* Footer Section */}
-      <div className="bg-neutral-light py-12">
+      <div className="bg-neutral-lightest py-12">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-neutral-darker mb-4">
             Can't find what you're looking for? Let's create something special together.

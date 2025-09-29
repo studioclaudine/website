@@ -15,18 +15,18 @@ interface CeramicData {
 }
 
 export function HomePage() {
-  // Sort ceramics by order field
+  // Sort ceramics by order field (low to high)
   const sortedCeramics = (ceramicsData as CeramicData[]).sort((a, b) => a.order - b.order)
 
   return (
-    <div className="min-h-screen bg-neutral-lightest">
+    <div className="min-h-screen bg-neutral-lighter">
       {/* Header */}
       <Header />
 
       {/* Grid Layout */}
-      <div className="p-2 pt-40 md:p-4 md:pt-40 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4" style={{gridAutoRows: 'min-content'}}>
+      <div className="p-2 pt-48 md:p-4 md:pt-48 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4" style={{gridAutoRows: 'min-content'}}>
         {/* Logo */}
-        <div className="h-48 md:h-80">
+        <div className="h-56 md:h-[28rem]">
           <img
             src="/logo.png"
             alt="Studio Claudine Logo"
@@ -35,14 +35,14 @@ export function HomePage() {
         </div>
 
         {/* Navigation buttons */}
-        <div className="bg-white rounded-2xl p-3 md:p-8 shadow-sm h-56 md:h-[28rem] flex flex-col md:-mt-24">
-          <nav className="space-y-2 md:space-y-6 flex-1 flex flex-col justify-center">
+        <div className="bg-neutral-lightest rounded-2xl p-3 md:p-6 shadow-sm h-48 md:h-80 flex flex-col">
+          <nav className="space-y-2 md:space-y-3 flex-1 flex flex-col justify-center">
             <LinkCard
-              href="/website/portfolio"
+              href="/website/shop"
               icon={<PortfolioIcon size={12} />}
               internal
             >
-              Portfolio
+              Shop
             </LinkCard>
             <LinkCard
               href="https://www.instagram.com/studio.claudine/"
@@ -50,13 +50,6 @@ export function HomePage() {
               external
             >
               Instagram
-            </LinkCard>
-            <LinkCard
-              href="https://www.etsy.com/shop/StudioClaudineDelft"
-              icon={<EtsyIcon size={12} />}
-              external
-            >
-              Etsy Shop
             </LinkCard>
             <LinkCard
               href="mailto:studioclaudine@outlook.com"

@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Route path="/" component={HomePage} />
       <Route path="/website/" component={HomePage} />
-      <Route path="/website/portfolio" component={PortfolioPage} />
+      <Route path="/website/shop" component={PortfolioPage} />
     </Router>
   )
 }
