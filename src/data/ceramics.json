@@ -4,7 +4,7 @@
     "order": 3,
     "title": "Jewelery tray",
     "subtitle": "",
-    "photo": "/PhotosPortolio/IMG_0932.jpg",
+    "photo": "./PhotosPortolio/IMG_0932.jpg",
     "price": "€10.00",
     "etsyLink": null,
     "outOfStock": false
@@ -14,7 +14,7 @@
     "order": 12,
     "title": "Olive oil bottle",
     "subtitle": null,
-    "photo": "/PhotosPortolio/IMG_0935 (1).jpg",
+    "photo": "./PhotosPortolio/IMG_0935 (1).jpg",
     "price": "€17.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370429039/handmade-small-olive-oil-bottle-vase",
     "outOfStock": false
@@ -24,7 +24,7 @@
     "order": 11,
     "title": "Tiny vase",
     "subtitle": null,
-    "photo": "/PhotosPortolio/IMG_0940.jpg",
+    "photo": "./PhotosPortolio/IMG_0940.jpg",
     "price": "€17.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370429039/handmade-small-olive-oil-bottle-vase",
     "outOfStock": false
@@ -34,7 +34,7 @@
     "order": 10,
     "title": "Cooking utensil holder",
     "subtitle": "Cooking supply",
-    "photo": "/PhotosPortolio/IMG_0945.jpg",
+    "photo": "./PhotosPortolio/IMG_0945.jpg",
     "price": "€13.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370420826/handmade-ceramic-spoon-holder",
     "outOfStock": false
@@ -44,7 +44,7 @@
     "order": 8,
     "title": "Serving bowl",
     "subtitle": "Terracotta",
-    "photo": "/PhotosPortolio/IMG_0947.jpg",
+    "photo": "./PhotosPortolio/IMG_0947.jpg",
     "price": "€15.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370424210/terracotta-serving-bowl-handmade",
     "outOfStock": false
@@ -54,7 +54,7 @@
     "order": 9,
     "title": "Vase",
     "subtitle": "Terracotta",
-    "photo": "/PhotosPortolio/IMG_0958.jpg",
+    "photo": "./PhotosPortolio/IMG_0958.jpg",
     "price": "€15.00",
     "etsyLink": null,
     "outOfStock": true
@@ -64,7 +64,7 @@
     "order": 1,
     "title": "Coffee set",
     "subtitle": "Milk and coffee set",
-    "photo": "/PhotosPortolio/IMG_0961.jpg",
+    "photo": "./PhotosPortolio/IMG_0961.jpg",
     "price": "€35.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370476391/handmade-ceramic-coffee-and-milk-set",
     "outOfStock": false
@@ -74,7 +74,7 @@
     "order": 2,
     "title": "Bowl",
     "subtitle": "Speckled white",
-    "photo": "/PhotosPortolio/IMG_0965.jpg",
+    "photo": "./PhotosPortolio/IMG_0965.jpg",
     "price": "€14.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370468328/handmade-white-speckled-mug-or-bowl",
     "outOfStock": false
@@ -84,7 +84,7 @@
     "order": 4,
     "title": "Mug",
     "subtitle": "Speckled - light blue",
-    "photo": "/PhotosPortolio/IMG_0989.jpg",
+    "photo": "./PhotosPortolio/IMG_0989.jpg",
     "price": "€16.00",
     "etsyLink": null,
     "outOfStock": false
@@ -94,7 +94,7 @@
     "order": 13,
     "title": "Small container",
     "subtitle": "Midnight blue",
-    "photo": "/PhotosPortolio/IMG_0993.jpg",
+    "photo": "./PhotosPortolio/IMG_0993.jpg",
     "price": "€22.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370471920/handmade-ceramic-storage-containers",
     "outOfStock": false
@@ -104,7 +104,7 @@
     "order": 5,
     "title": "Marble vase",
     "subtitle": "Black & white",
-    "photo": "/PhotosPortolio/IMG_1211.jpg",
+    "photo": "./PhotosPortolio/IMG_1211.jpg",
     "price": "€28.00",
     "etsyLink": null,
     "outOfStock": false
@@ -114,7 +114,7 @@
     "order": 14,
     "title": "Bowl",
     "subtitle": "Neutral speckled",
-    "photo": "/PhotosPortolio/IMG_1213.jpg",
+    "photo": "./PhotosPortolio/IMG_1213.jpg",
     "price": "€22.00",
     "etsyLink": null,
     "outOfStock": false
@@ -124,7 +124,7 @@
     "order": 3,
     "title": "Candle",
     "subtitle": "Speckled white, candle sand",
-    "photo": "/PhotosPortolio/IMG_1215.jpg",
+    "photo": "./PhotosPortolio/IMG_1215.jpg",
     "price": "13.00",
     "etsyLink": null,
     "outOfStock": false
@@ -134,7 +134,7 @@
     "order": 6,
     "title": "Candle",
     "subtitle": "Blue, candle sand",
-    "photo": "/PhotosPortolio/IMG_1216.jpg",
+    "photo": "./PhotosPortolio/IMG_1216.jpg",
     "price": "13.00",
     "etsyLink": null,
     "outOfStock": false
@@ -144,7 +144,7 @@
     "order": 7,
     "title": "Matcha bowl",
     "subtitle": "Purple",
-    "photo": "/PhotosPortolio/IMG_1065.jpg",
+    "photo": "./PhotosPortolio/IMG_1065.jpg",
     "price": "€24.00",
     "etsyLink": null,
     "outOfStock": false
