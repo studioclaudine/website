@@ -8,8 +8,7 @@ function App() {
   return (
     <Router>
       <Route path="/" component={HomePage} />
-      <Route path="/website/" component={HomePage} />
-      <Route path="/website/shop" component={PortfolioPage} />
+      <Route path="/shop" component={PortfolioPage} />
     </Router>
   )
 }

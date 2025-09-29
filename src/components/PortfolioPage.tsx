@@ -33,7 +33,7 @@ export function PortfolioPage() {
       <div className="max-w-6xl mx-auto px-6 pt-40 pb-8">
         <div className="flex justify-between items-center">
           <a
-            href="/website/"
+            href="/"
             className="inline-flex items-center gap-2 text-neutral-accent hover:text-neutral-darker transition-colors duration-300 font-medium"
           >
             ← Back to Home

@@ -19,10 +19,10 @@ export function Header() {
 
           {/* Center - Logo */}
           <div className="flex-shrink-0 text-center">
-            <a href="/website/" className="block">
+            <a href="/" className="block">
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-neutral-lighter border-2 border-neutral-medium shadow-lg mx-auto">
                 <img
-                  src="/website/logo.png"
+                  src="/logo.png"
                   alt="Studio Claudine Logo"
                   className="w-full h-full object-cover"
                   onError={(e) => console.error('Logo failed to load:', e)}

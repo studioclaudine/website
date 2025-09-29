@@ -28,7 +28,7 @@ export function HomePage() {
         {/* Logo */}
         <div className="h-56 md:h-[28rem]">
           <img
-            src="/website/logo.png"
+            src="/logo.png"
             alt="Studio Claudine Logo"
             className="w-full h-full rounded-2xl shadow-sm object-cover"
           />
@@ -38,7 +38,7 @@ export function HomePage() {
         <div className="bg-neutral-lightest rounded-2xl p-3 md:p-6 shadow-sm h-48 md:h-80 flex flex-col">
           <nav className="space-y-2 md:space-y-3 flex-1 flex flex-col justify-center">
             <LinkCard
-              href="/website/shop"
+              href="/shop"
               icon={<PortfolioIcon size={12} />}
               internal
             >
