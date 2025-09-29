@@ -28,7 +28,7 @@ export function HomePage() {
         {/* Logo */}
         <div className="h-56 md:h-[28rem]">
           <img
-            src="./logo.png"
+            src="/website/logo.png"
             alt="Studio Claudine Logo"
             className="w-full h-full rounded-2xl shadow-sm object-cover"
           />
