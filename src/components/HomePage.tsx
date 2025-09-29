@@ -1,5 +1,5 @@
 import { LinkCard } from './LinkCard'
-import { InstagramIcon, EtsyIcon, MailIcon, PortfolioIcon } from './Icons'
+import { InstagramIcon, MailIcon, PortfolioIcon } from './Icons'
 import { Header } from './Header'
 import ceramicsData from '../data/ceramics.json'
 
