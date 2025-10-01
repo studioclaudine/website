@@ -17,7 +17,7 @@
     "photo": "/PhotosPortolio/IMG_0935 (1).jpg",
     "price": "€17.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370429039/handmade-small-olive-oil-bottle-vase",
-    "outOfStock": false
+    "outOfStock": true
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "photo": "/PhotosPortolio/IMG_0940.jpg",
     "price": "€17.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370429039/handmade-small-olive-oil-bottle-vase",
-    "outOfStock": false
+    "outOfStock": true
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "photo": "/PhotosPortolio/IMG_0945.jpg",
     "price": "€13.00",
     "etsyLink": "https://studioclaudinedelft.etsy.com/listing/4370420826/handmade-ceramic-spoon-holder",
-    "outOfStock": false
+    "outOfStock": true
   },
   {
     "id": 5,
