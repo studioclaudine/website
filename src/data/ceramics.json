@@ -148,5 +148,35 @@
     "price": "€24.00",
     "etsyLink": null,
     "outOfStock": false
+  },
+  {
+    "id": 2,
+    "order": 7,
+    "title": "Mugs large",
+    "subtitle": "Midnight Blue",
+    "photo": "/PhotosPortolio/IMG_1290.jpg",
+    "price": "€24.00",
+    "etsyLink": null,
+    "outOfStock": false
+  },
+  {
+    "id": 2,
+    "order": 7,
+    "title": "XXL tea mug",
+    "subtitle": "Blue",
+    "photo": "/PhotosPortolio/IMG_1293.jpg",
+    "price": "€31.00",
+    "etsyLink": null,
+    "outOfStock": false
+  },
+  {
+    "id": 2,
+    "order": 7,
+    "title": "Custom cat ornament",
+    "subtitle": "Purple",
+    "photo": "/PhotosPortolio/IMG_1308.jpg",
+    "price": "€9.50",
+    "etsyLink": null,
+    "outOfStock": false
   }
 ]
