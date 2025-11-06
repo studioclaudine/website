@@ -15,8 +15,8 @@ interface CeramicData {
 }
 
 export function HomePage() {
-  // Sort ceramics by order field (low to high)
-  const sortedCeramics = (ceramicsData as CeramicData[]).sort((a, b) => a.order - b.order)
+  // Sort ceramics by order field (low to high) and limit to 10 items
+  const sortedCeramics = (ceramicsData as CeramicData[]).sort((a, b) => a.order - b.order).slice(0, 10)
 
   return (
     <div className="min-h-screen bg-neutral-lighter">
