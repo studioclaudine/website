@@ -9,6 +9,7 @@ function App() {
     <Router>
       <Route path="/" component={HomePage} />
       <Route path="/shop" component={PortfolioPage} />
+      <Route path="/shop/:filter" component={PortfolioPage} />
     </Router>
   )
 }

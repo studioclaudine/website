@@ -1,7 +1,8 @@
 import { CeramicItem } from './CeramicItem'
 import { Header } from './Header'
 import ceramicsData from '../data/ceramics.json'
-import { useState } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
+import { route } from 'preact-router'
 
 interface CeramicData {
   id: number
@@ -14,8 +15,23 @@ interface CeramicData {
   outOfStock: boolean
 }
 
-export function PortfolioPage() {
-  const [stockFilter, setStockFilter] = useState<'all' | 'inStock' | 'outOfStock'>('all')
+interface PortfolioPageProps {
+  filter?: string
+}
+
+export function PortfolioPage({ filter }: PortfolioPageProps) {
+  const [stockFilter, setStockFilter] = useState<'all' | 'inStock' | 'outOfStock'>('inStock')
+
+  // Update filter based on URL parameter
+  useEffect(() => {
+    if (filter === 'all' || filter === 'instock' || filter === 'outofstock') {
+      const normalizedFilter = filter === 'instock' ? 'inStock' : filter === 'outofstock' ? 'outOfStock' : 'all'
+      setStockFilter(normalizedFilter)
+    } else if (!filter) {
+      // Redirect to /shop/instock when no filter is specified
+      route('/shop/instock', true)
+    }
+  }, [filter])
 
   const filteredCeramics = (ceramicsData as CeramicData[]).filter(item => {
     if (stockFilter === 'inStock') return !item.outOfStock
@@ -41,7 +57,7 @@ export function PortfolioPage() {
 
           <div className="flex gap-2">
             <button
-              onClick={() => setStockFilter('all')}
+              onClick={() => route('/shop/all')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
                 stockFilter === 'all'
                   ? 'bg-neutral-accent text-neutral-lightest'
@@ -51,7 +67,7 @@ export function PortfolioPage() {
               All Items
             </button>
             <button
-              onClick={() => setStockFilter('inStock')}
+              onClick={() => route('/shop/instock')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
                 stockFilter === 'inStock'
                   ? 'bg-neutral-accent text-neutral-lightest'
@@ -61,7 +77,7 @@ export function PortfolioPage() {
               In Stock
             </button>
             <button
-              onClick={() => setStockFilter('outOfStock')}
+              onClick={() => route('/shop/outofstock')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
                 stockFilter === 'outOfStock'
                   ? 'bg-neutral-accent text-neutral-lightest'
